@@ -1,0 +1,260 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* headr */
+.header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: white;
+    z-index: 4;
+   
+}
+.box-header {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+}
+.headre-left {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+.headre-left a {
+    text-decoration: none;
+    color: black;
+    margin-right: 2rem;
+  
+ 
+}
+.header-right{
+    margin-right: 5%;
+}
+.header-right a{
+ text-decoration: none;
+ color: black;
+}
+.header img { 
+    visibility: hidden;
+}
+/*index*/
+
+.index-main {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+    perspective: 100px;
+}
+.logo-para{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index-main  a {
+    text-decoration: none;
+    background: none;
+    padding: 20px 40px;
+    border-radius:  20px;
+    font-size: 1.5rem;
+    background-color: #59D5E0;
+    border: none;
+    color: white;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    margin-bottom: 2%;
+ 
+}
+
+.index-main  a::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #F5DD61;
+    width: 20px;
+    height: 200px;
+    transform: translateY(-60%) translateX(0) rotateZ(45deg);
+    transition: all 0.3s ease;
+}
+
+.index-main  a:after {
+    content: "";
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #FAA300;
+    width: 20px;
+    height: 200px;
+    transform: translateY(60%) translateX(0) rotateZ(45deg);
+    transition: all 0.3s ease;
+}
+
+.index-main  a:hover {
+    background-color: #F4538A ;
+}
+
+.index-main  a:hover:before {
+    transform: translateY(90px) translateX(280px) rotateZ(45deg) ;
+}
+.index-main  a:hover:after {
+    transform: translateY(-90px) translateX(-280px) rotateZ(45deg) ;
+}
+.background-animation{
+    position: relative;
+    margin-left:auto ;
+    margin-right: auto;
+    height: 90vh;
+}
+
+
+.cloud1 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: -10;
+    animation-name: clouds;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+}
+@keyframes clouds {
+    from {
+        left: 0;
+    }
+    to {
+        left: 60vw;
+    }
+
+
+}
+.cloud2 {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: -10;
+    animation-name: clouds1;
+    animation-duration: 110s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+}
+@keyframes clouds1 {
+    from {
+        right: 0;
+    }
+    to {
+        right: 60vw;
+    }}
+
+    .clouds {
+        animation-name: cloud-opacity;
+        animation-duration: 0.3s;
+        animation-delay: 0.7ms;
+        animation-timing-function: ease;
+    }
+
+    @keyframes cloud-opacity {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .tree {
+        position: absolute;
+        right: 10%;
+        top: 20%;
+        z-index: -2;
+        
+    }
+    .tree2 {
+        z-index: -2;
+        position: absolute;
+        left: 0;
+        top: 20%;
+    }
+    .tree3 {
+        position: absolute;
+        left: 0;
+        top: 25%;
+        z-index: -4;
+        opacity: 0.5;
+    }
+    .tree4{
+        position: absolute;
+        right: 2%;
+        top: 25%;
+        z-index: -4;
+    }
+    .ball {
+        position: absolute;
+        animation-name: ball;
+        animation-duration: 10s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-direction: alternate-reverse;
+        z-index: -3;
+        left: 50%;
+        bottom: 10%;
+       
+    }
+    @keyframes ball {
+        from {
+            left: 50%;
+            bottom: 10%;
+            transform: rotate(0deg);
+        }
+        to {
+            left: 100%;
+            bottom: 10%;
+            transform: rotate(960deg);
+        }
+    }
+    .grey-bkg{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -100;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(247, 247, 247);
+    }
+
+    .play-contianer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        
+    }
+    .play-bkg-grey{
+        padding-top: 10%;
+        background-color:  rgb(247, 247, 247);
+    }
+    .play-contianer h1 {
+        font-family: "mojito", sans-serif;
+        font-weight:700;
+        font-style: normal;
+        font-size: 5rem;
+        color: #F4538A;
+    }
