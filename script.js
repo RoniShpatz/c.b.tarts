@@ -7,15 +7,15 @@ class MyHeader extends HTMLElement {
                 <a href="index.html"> <img src="./images/logo copy.png" id="logo-small"></a>
             </div>
             <div class="header-bar">
-            <div class="headre-left">
-                <a href="./about.html">About C.B.T</a>
-                <a href="./tests.html">Test</a>
-                <a href="./games.html">Games</a>
+                <div class="headre-left">
+                    <a href="./about.html">About C.B.T</a>
+                    <a href="./tests.html">Test</a>
+                    <a href="./games.html">Games</a>
+                </div>
+                <div class="header-right">
+                    <a href="./aboutme.html">About Me</a>
+                </div>
             </div>
-            <div class="header-right">
-                <a href="./aboutme.html">About Me</a>
-            </div>
-        </div>
             </header>
        
         `
@@ -80,7 +80,7 @@ customElements.define(`my-footer`, MyFooter);
 addEventListener("scroll", (event) => {
     var target = document.getElementById("big-logo").getBoundingClientRect();
     var addClass = document.getElementsByClassName("header-bar")[0];
-    var addLogo = document.getElementById("logo-small")
+    var addLogo = document.getElementById("logo-small");
     
     if (target.top < 54) {
         addClass.classList.add("box-header");
@@ -91,4 +91,69 @@ addEventListener("scroll", (event) => {
         addLogo.style.opacity = "0";
     }
 });
+
+// carousel code 
+
+const carousel = document.querySelector(".games-grid");
+const firstImage = carousel.querySelectorAll("div")[0];
+const arrowBtns = document.querySelectorAll(".btn-caruael-games button");
+
+let isDragdStart = false, prevPageX, PrevScrollLeft;
+let firstImageWidth = firstImage.clientWidth + 10 ;
+let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+
+const dragStart = (e) => {
+      isDragdStart = true;
+      prevPageX = e.pageX;
+      PrevScrollLeft = carousel.scrollLeft
+}
+
+const dragging = (e) => {
+    if (!isDragdStart) {
+        return;
+    }
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    carousel.scrollLeft = PrevScrollLeft - positionDiff;
+    carousel.classList.add("dragging");
+    showHideBtn()
+    
+}
+
+
+function showHideBtn() {
+    if (carousel.scrollLeft == 0) {
+        arrowBtns[0].style.visibility = "hidden";
+    } else {
+        arrowBtns[0].style.visibility = "visible";
+    }
+    if (carousel.scrollLeft == scrollWidth) {
+        arrowBtns[1].style.visibility = "hidden";
+    } else {
+        arrowBtns[1].style.visibility = "visible";
+    }
+}
+
+const dragStop = ()=> {
+    isDragdStart = false
+    carousel.classList.remove("dragging");
+}
+arrowBtns.forEach( btn => {
+    btn.addEventListener("click", () => {
+        if (btn.id === "left") {
+            carousel.scrollLeft -= firstImageWidth;
+            setTimeout( () =>showHideBtn(), 60 ) ;
+        } else {
+            carousel.scrollLeft += firstImageWidth
+            setTimeout( () =>showHideBtn(), 60 ) ;
+        }
+    })
+})
+
+
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mouseup", dragStop);
+carousel.addEventListener("mouseleave", dragStop);
 
