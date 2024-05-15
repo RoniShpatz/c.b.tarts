@@ -406,7 +406,7 @@ footer  p {
         padding: 5%;
         background-color: #59D5E0;
         position: relative;
-        z-index: 99;
+        
         transition: all 0.2s ease-in; 
         overflow: hidden;
         object-fit: cover;
@@ -499,6 +499,7 @@ footer  p {
         text-shadow: 3px 2px 12px rgba(0, 0, 0, 0.18);
     }
     .btn-caruael-games :last-child {
+        visibility: visible;
         background-color: transparent;
         border: none;
         font-size: 4rem;
@@ -520,3 +521,85 @@ footer  p {
         width: calc(100% / 1);
     }
   }
+
+  /* index /test/ */
+  .test-contianer{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+}
+.test-contianer h1 {
+    margin-bottom: 2%;
+}
+
+.test-contianer-flex{
+   width: 60%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.test-toughts-index {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    font-size: 1.3rem;
+   
+    
+}
+.test-contianer-flex .index-test-img{
+    position: relative;
+    
+}
+.test-contianer-flex div  a {
+    color: white;
+    background-color: #59D5E0;
+    padding: 2% 4%;
+    text-decoration: none;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    font-size: 2rem;
+    border-radius: 15px;
+    transition: all 0.4s ease-in;
+    overflow: hidden;
+}
+.test-contianer-flex div  a:before{
+    content: "";
+    bottom: 0;
+    right: -20px;
+    position: absolute;
+    background-color: #FAA300;
+    width: 20px;
+    height: 200px;
+    transform-origin: left bottom;
+    transform: translateX(0) translateY(0) ;
+    transition: all 0.3s ease-in;
+    
+}
+.test-contianer-flex div  a:after{
+    content: "";
+    bottom: -100px;
+    left: -22px;
+    position: absolute;
+    background-color: #F5DD61;
+    width: 20px;
+    height: 200px;
+    transform-origin: right bottom;
+    transform: translateX(0) translateY(0) ;
+    transition: all 0.4s ease-in;
+}
+
+.test-contianer-flex div  a:hover:before{
+    transform: translateX(-250px) translateY(100px) ;
+    
+}
+.test-contianer-flex div  a:hover:after{
+    transform: translateX(250px) translateY(-100px) ;
+}
+.test-contianer-flex div  a:hover {
+    background-color: #F4538A;
+}
