@@ -76,6 +76,15 @@ class MyFooter extends HTMLElement {
 
 customElements.define(`my-footer`, MyFooter);
 
+class MyBackBtn extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =`<div class="back-btn-div"><a class="back-btn" href="./index.html"><span>Back</span></a></div>` }};
+
+customElements.define(`my-back-btn`, MyBackBtn);        
+
+
+
+
 // scroll and small logo shows indexedDB.html
 const currntPathname = window.location.pathname;
 const currntPathnameWithDot = `.` + currntPathname 
@@ -91,7 +100,7 @@ if(currentPageA) {
 
 // id="header-underline"
 
-addEventListener("scroll", (event) => {
+addEventListener("scroll", () => {
     var addClass = document.getElementsByClassName("header-bar")[0];
     var addLogo = document.getElementById("logo-small");
     if (currntPathname == '/index.html') {
@@ -107,6 +116,7 @@ addEventListener("scroll", (event) => {
     } else {
         addClass.classList.add("box-header");
         addLogo.style.opacity = "1";
+        
     }
 
 });

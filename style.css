@@ -611,3 +611,244 @@ footer  p {
 .test-contianer-flex div  a:hover {
     background-color: #F4538A;
 }
+
+/* about cbt style */
+
+.about-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 110%;
+    
+}
+.about-container h1 {
+    text-align: center;
+    color: #59D5E0;
+    margin-bottom: 10%;
+}
+.about-container h3 {
+    color: #F4538A;
+}
+.about-container-1 {
+    margin-bottom: 15%;
+}
+.about-container-2 ul{
+    list-style: none;
+}
+.about-container-2 h3 span {
+    display: inline-block;
+    font-size: 2rem;
+    transform: rotate(20deg);
+}
+.about-container-2 .about-list  p{
+    margin-left: 2rem;
+}
+.back-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.back-btn {
+    background-color: #59D5E0;
+    padding: 1% 2%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+.back-btn:before{
+    position: absolute;
+    content: "";
+    left: -120%;
+    top: 0;
+    width: 120px;
+    height: 30px;
+    background-color: #FAA300;
+    transition: all ease 0.3s;
+   
+    
+}
+
+.back-btn:after{
+    position: absolute;
+    content: "";
+    bottom:  0;
+    right: -120%;
+    width: 120px;
+    height: 30px;
+    background-color: #F5DD61;
+    transition: all ease 0.3s;
+    
+}
+
+.back-btn:hover:before{
+   transform: translate(220%);
+}
+.back-btn:hover:after{
+    transform: translate(-220%) translateY(2%);
+ }
+ .back-btn:hover{
+    background-color: #F4538A;
+   
+ }
+
+ /* test page style */
+ .test-choose-container-2 {
+    background-image: linear-gradient( white ,#d8d8d8) ;
+ }
+ .test-contianer-tests {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .test-contianer-tests {
+    text-align: center;
+ }
+ .test-contianer-tests h1 {
+    color: #59D5E0;
+    margin-bottom: 0;
+ }
+ .test-contianer-tests >p{
+    margin-bottom: 5%;
+ }
+
+.test-btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.test-btn-container .circle-1 {
+    background-color:#eaeaea ;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle-1 .hand{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform-origin: left bottom;
+}
+
+.test-btn-container h4{
+    color: #F4538A;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+.test-btn-container p {
+    margin-top: 0;
+}
+.test-btn-container .circle-2 {
+    background-color:#eaeaea ;
+    border-radius: 50%;
+    position: relative;
+}
+.circle-2 .hand{
+    position: absolute;
+    left: -20%;
+    bottom: 0;
+    z-index: 0;
+    transition: all 0.5s ease;
+    transform-origin: right bottom;
+    
+    
+}
+
+.circle-2:hover .hand{
+   animation-name: wave;
+   animation-duration: 0.5s;
+   animation-direction: alternate, reverse, normal;
+   animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(35deg);
+    }
+}
+
+
+.circle-1:hover .hand{
+    animation-name: wave;
+    animation-duration: 0.5s;
+    animation-direction: alternate, reverse, normal;
+    animation-iteration-count: infinite;
+}
+.test-choose-container-sub-2{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 130vh;
+}
+
+.test-choose-container-sub-2 h1{
+    color: #59D5E0;
+
+}
+.test-choose-container-sub-2 h4{
+    color: #F4538A;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.test-whitebox-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.test-whitebox-container .test-box-explain{
+    background-color: white;
+    width: 20%;
+    border-radius: 20%;
+    padding: 2%;
+    box-shadow: 0px 1px 0px 0px rgba(27, 31, 36, 0.04);
+}
+
+.bkg-images .hill-1 {
+ position: absolute;
+ bottom: 0%;
+ left: 20%;
+ z-index: 4;
+ transition: all 0.3s ease;
+}
+.bkg-images .hill-2 {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: 4;
+    transition: all 0.3s ease;
+   } 
+
+
+.bkg-images .kid-medi{
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    z-index: 5;
+    
+   }
+.bkg-images .hill-3 {
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    z-index: 4;
+   }
+.bkg-images .hill-4 {
+       position: absolute;
+       bottom: 0%;
+       left: 5%;
+       z-index: 2;
+    }
