@@ -22,6 +22,12 @@ header {
     z-index: 11;
     padding: 1.5%;
 }
+.you-are-here {
+   background-image: url("./images/i-am-here.png");
+   background-position: center;
+   background-repeat: no-repeat;
+  
+}
 .header-bar a:hover {
     color: #F4538A;
 }
@@ -50,6 +56,7 @@ header {
     color: black;
     margin-right: 2rem;
     z-index: 20;
+    padding: 10px;
 }
 .header-right {
     margin-right: 5%;
@@ -60,6 +67,7 @@ header {
 .header-right a {
  text-decoration: none;
  color: black;
+ padding: 10px;
 
 }
 #logo-small { 
