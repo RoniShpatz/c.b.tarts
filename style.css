@@ -665,7 +665,7 @@ footer  p {
 .back-btn:before{
     position: absolute;
     content: "";
-    left: -120%;
+    left: 100%;
     top: 0;
     width: 120px;
     height: 30px;
@@ -679,7 +679,7 @@ footer  p {
     position: absolute;
     content: "";
     bottom:  0;
-    right: -120%;
+    right: 100%;
     width: 120px;
     height: 30px;
     background-color: #F5DD61;
@@ -688,10 +688,10 @@ footer  p {
 }
 
 .back-btn:hover:before{
-   transform: translate(220%);
+   transform: translate(-220%);
 }
 .back-btn:hover:after{
-    transform: translate(-220%) translateY(2%);
+    transform: translate(220%);
  }
  .back-btn:hover{
     background-color: #F4538A;
@@ -793,6 +793,7 @@ footer  p {
     text-align: center;
     position: relative;
     height: 130vh;
+  
 }
 
 .test-choose-container-sub-2 h1{
@@ -806,7 +807,7 @@ footer  p {
 }
 .test-whitebox-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 .test-whitebox-container .test-box-explain{
@@ -815,40 +816,165 @@ footer  p {
     border-radius: 20%;
     padding: 2%;
     box-shadow: 0px 1px 0px 0px rgba(27, 31, 36, 0.04);
+    
 }
 
 .bkg-images .hill-1 {
  position: absolute;
  bottom: 0%;
- left: 20%;
+ left: -80px;
  z-index: 4;
- transition: all 0.3s ease;
+ 
 }
+
+ .hill-1-in{
+   animation-name: hill-1;
+   animation-duration: 3s;
+   animation-delay: 0.2s;
+   animation-timing-function: ease-in-out; 
+   animation-fill-mode: forwards;
+
+}
+.hill-2-in{
+    animation-name: hill-1;
+   animation-duration: 3.5s;
+   animation-delay: 0.5s;
+   animation-timing-function: ease-in-out; 
+   animation-fill-mode: forwards;
+}
+@keyframes hill-1 {
+    from{
+        transform: translateX(0) ;
+    }
+    to {
+        transform: translateX(200px);
+    }
+}
+
 .bkg-images .hill-2 {
     position: absolute;
-    bottom: 0%;
-    left: 0;
+    bottom: -4px;
+    left: 400px;
     z-index: 4;
     transition: all 0.3s ease;
+    
    } 
 
 
 .bkg-images .kid-medi{
     position: absolute;
     bottom: 20%;
-    left: 30%;
+    left: 80px;
     z-index: 5;
     
    }
 .bkg-images .hill-3 {
     position: absolute;
     bottom: 0%;
-    left: 30%;
+    left: -200px;
     z-index: 4;
    }
 .bkg-images .hill-4 {
        position: absolute;
        bottom: 0%;
-       left: 5%;
+       left: 470px;
        z-index: 2;
     }
+
+.test-box-explain  a{
+    display: inline-block;
+    padding: 4% 8%;
+    background-color: #59D5E0;
+    text-decoration: none;
+    border-radius: 20%;
+    color: white;
+    transition: all 0.2s;
+}
+
+.test-box-explain  a span{
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.test-box-explain  a:hover{
+    background-color: #F4538A;
+    
+}
+.test-box-explain  a:hover span{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+
+/* games styling */
+.games-container{
+    margin-bottom: 0;
+}
+
+.game-container-2 h1{
+    color: #59D5E0;
+    margin-bottom: 1%;
+    margin-top: 3%;
+}
+
+.game-container-2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.games-ball-animation{
+    animation: bounce 1s ease-in-out infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100px);
+    }
+  }
+  .games-ball-animation span{
+
+  }
+
+
+
+.game-container-3{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game-container-3 h1{
+    color: #59D5E0;
+    margin-top: 3%;
+    text-align: center;
+}
+.games-choose-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.games-choose-container div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 8px 24px 0px rgba(140, 149, 159, 0.2);
+    border-radius: 20%;
+    padding-top: 2%;
+}
+.games-choose-container div a{
+    text-decoration: none;
+}
