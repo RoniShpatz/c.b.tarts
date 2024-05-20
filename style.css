@@ -930,10 +930,11 @@ footer  p {
     
 }
 .games-ball-animation{
+    margin-bottom: -10px;
     animation: bounce 1s ease-in-out infinite;
     animation-fill-mode: both;
     animation-direction: alternate;
-    position: relative;
+   
 }
 
 @keyframes bounce {
@@ -944,11 +945,37 @@ footer  p {
       transform: translateY(-100px);
     }
   }
-  .games-ball-animation span{
-
+  .ball-animation-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
+  .ball-shadow{
+    margin-bottom: -20px;
+        left: 0;
+        top: -5%;
+        bottom: 0;
+        width: 80px;
+        height: 20px;
+        background-color: rgb(87, 86, 127);
+        border-radius: 50%;
+        z-index: -1;
+        animation: shadow-move 1s ease-in-out infinite;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+  }
 
+  @keyframes shadow-move {
+    from {
+      transform: scale(1.3, 0.6) ;
+      filter: blur(2px);
+    }
+    to {
+      transform: scale(0.8, 0.9);
+      filter: blur(10px);
+    }}
 
 .game-container-3{
     width: 80%;
@@ -962,19 +989,25 @@ footer  p {
 }
 .games-choose-container{
     display: grid;
-    gap: 10px;
+    gap: 2%;
     grid-template-columns: 1fr 1fr 1fr;
     
 }
 .games-choose-container div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     background-color: white;
     box-shadow: 0px 8px 24px 0px rgba(140, 149, 159, 0.2);
-    border-radius: 20%;
-    padding-top: 2%;
+    border-radius: 5%;
+    padding-top: 5%;
+   
 }
 .games-choose-container div a{
     text-decoration: none;
 }
+
+.
+
+
