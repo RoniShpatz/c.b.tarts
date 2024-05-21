@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/dak4nau.css">
+    <title>c.b.t arts</title>
+</head>
+<body>
+    <my-header></my-header>
+    <div class="wheel-container">
+        <h1>Wheel of Solutions</h1>
+        <div class="wheel-pat-1">
+            <div >
+                <div class="wheel-problem">
+                    <h4>what is the problem?</h4>
+                    <textarea id="problem" name="thought" rows="6" cols="50"></textarea><br>
+                    <div class="wheel-buttons">  
+                        <button id="submit-sproblem" class="Submit">Submit</button>
+                        <button class="reset">Reset</button>
+                    </div>
+                  
+                </div>
+                <div class="wheel-solution-add">
+                    <h4>solutions:</h4>
+                    <p>Write alternative solutions and add them to the wheel.</p>
+                    <textarea id="solution" name="thought" rows="6" cols="50" ></textarea><br>
+                   <div class="wheel-buttons">  
+                    <button id="add-solution" class="add">Add</button>
+                    <button class="reset">reset</button>
+                   </div>
+                  
+                </div>  
+            </div>
+            <div class="wheel-parent">
+                <div class="arrow"></div>
+                <button id="spin">Spin</button>
+                <div id="wheel" class="wheel"></div>
+            </div>
+            
+        </div>
+        <div class="wheel-part-2">
+            <h1>The Solution is:</h1>
+            <img src="./images/solution.png">
+        </div>
+
+
+
+        <my-back-btn></my-back-btn>
+    </div>
+    <my-footer></my-footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script src="./wheel.js"></script>
+        
+</body>
+</html> 
+</body>
+</html>

@@ -75,10 +75,23 @@ header {
     transition: opacity 0.5s ease;
 }
 /*footer*/
+
 footer {
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.year p{
+ text-align: center;
+padding-bottom: 1%;
+}
+                   
+.footer {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(45, 45, 45);
+    
     width: 100%;
     padding: 2%;
 }
@@ -991,7 +1004,7 @@ footer  p {
     display: grid;
     gap: 2%;
     grid-template-columns: 1fr 1fr 1fr;
-    
+ 
 }
 .games-choose-container div{
     display: flex;
@@ -1006,8 +1019,367 @@ footer  p {
 }
 .games-choose-container div a{
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.
+.games-choose-container div p {
+    background-color: #59D5E0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10%;
+}
+
+.games-choose-container div a{
+   transition: all 0.4s ease;
+
+}
+
+.games-choose-container  div:hover{
+    transform: scale(1.1);
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
 
 
+
+
+/* about me */
+
+.aboutme-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 140%;
+}
+
+/* emotions game */
+
+.emotions-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.emotions-start-container{
+    height: 80vh;
+
+}
+.emotions-start-container h1{
+    margin-bottom: 0;
+}
+.emotions-start-container div {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-btn {
+    text-decoration: none;
+    background-color: #59D5E0;
+    font-size: 3rem;
+    color: white;
+    padding: 2%;
+    border-radius: 20%;
+    cursor: pointer;
+    padding: 1%;
+    position: relative;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.play-btn:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 40px;
+    background-color: #FAA300;
+    transition: all 0.3s ease;
+    transform: translateX(-120%);
+}
+
+.play-btn::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 130px;
+    height: 40px;
+    background-color: #F5DD61;
+    transition: all 0.4s ease;
+    transform: translateX(120%);
+}
+ 
+.play-btn:hover::before{
+    transform: translateX(120%);
+}
+
+.play-btn:hover::after{
+    transform: translateX(-120%);
+}
+
+.play-btn:hover{
+    background-color: #F4538A;
+}
+
+.emotions-choose-container{
+ display: flex;
+ justify-content: space-around;
+ box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+ padding: 5%;
+ border-radius: 10%;
+}
+.emotions-choose-container h3{
+    color: #F4538A;
+}
+.emotions-choose-card{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-right: 2%;
+}
+
+.emotions-choose-card button{
+    background-color: #59D5E0;
+    border: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.emotions-choose-card button:hover{
+    color: #F5DD61;
+    background-color: #F4538A;
+}
+/* river game */
+
+.river-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.river-container h1 {
+    margin-bottom: 1%;
+
+}
+.river-container .river-part-1 p {
+    line-height: 200%;
+}
+
+.river-part-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.river-play-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #59D5E0;
+    border: none;
+    padding: 1%;
+    color: white;
+    font-size: 2rem;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.river-play-btn:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 40px;
+    background-color: #FAA300;
+    transition: all 0.3s ease;
+    transform: translateX(-120%);
+}
+
+.river-play-btn::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 130px;
+    height: 40px;
+    background-color: #F5DD61;
+    transition: all 0.4s ease;
+    transform: translateX(120%);
+}
+ 
+.river-play-btn:hover::before{
+    transform: translateX(120%);
+}
+
+.river-play-btn:hover::after{
+    transform: translateX(-120%);
+}
+
+.river-play-btn:hover{
+    background-color: #F4538A;
+}
+
+.river-part-2 h3 {
+    color: #F4538A;
+    margin-top: 10%;
+}
+.river-bkg{
+    width: 100%;
+    height: 50vh;
+    background-image: url("./images/river-bkg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10%;
+    position: relative;
+   
+}
+.river-bkg div {
+    position: absolute;
+    left: 0;
+    bottom: 65%;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/leaf.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    width: fit-content;
+    animation: moving-thoughts 120s ease forwards; /* Changed ease to linear */
+    offset-path: path("M.18,73.2S194.52-2.28,311.5,1.5s373.58,264.15,545.28,273.58S1492.63-17.64,1711.5,1.36s501.89,226.55,590.57,228.44,158.49-69.81,158.49-69.81");
+}
+
+@keyframes moving-thoughts {
+    from {
+        offset-distance: 0%;
+    }
+    to {
+        offset-distance: 100%;
+          
+    }
+}
+
+.river-part-2 textarea{
+    border: solid #FAA300;
+}
+
+.river-part-2 .submit {
+    border: solid #F4538A;
+    background-color: #F5DD61;
+    color: #F4538A;
+    padding: 1%;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.river-part-2 .submit:hover{
+    background-color: #F4538A;
+    color: white;
+}
+/* wheel style */
+
+.wheel-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.wheel-pat-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+   
+}
+.wheel-container h1{
+    color: #59D5E0;
+    margin-bottom: 1%;
+}
+
+.wheel-pat-1 h4{
+    color: #F4538A;
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+}
+
+.wheel-pat-1 button {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    border: none;
+    background-color: #FAA300;
+    padding: 1%;
+    font-size: 1rem;
+    border-radius: 15%;
+    transition: all 0.2s ease ;
+}
+.wheel-solution-add p{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.wheel-pat-1 textarea {
+    border: solid #FAA300;
+    border-radius: 20px;
+}
+.wheel-pat-1  .reset{
+    background-color: #F5DD61;
+    border: solid #F4538A;
+    color: #F4538A;
+    transition: all 0.2s ease ;
+}
+.wheel-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.wheel-pat-1 button:hover{
+    background-color: #59D5E0;
+    color: black;
+}
+.wheel{
+    width: 600px;
+    height: 600px;
+    background-color: #59D5E0;
+    border-radius: 50%;
+    position: relative;
+  
+}
+.wheel div {
+    position: absolute;
+     left: 0;
+    top: 0;
+    color: black;
+
+}
+.wheel-parent {
+    position: relative;
+}
+
+.wheel-parent button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+}

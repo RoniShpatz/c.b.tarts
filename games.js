@@ -1,6 +1,6 @@
 const ball = document.getElementsByClassName("games-ball");
 const shadow = document.getElementsByClassName("shadow");
-console.log(ball)
+// console.log(ball)
 
 
 const options = {
@@ -29,4 +29,26 @@ const targetElement = document.getElementById("in-view-port");
 observer.observe(targetElement);
 
 
-const buttons = document.getElementsByClassName("")
+const buttons = document.querySelectorAll(".games-choose-container div");
+
+
+
+
+buttons.forEach(button => {
+    button.addEventListener("mouseover", () => {
+        buttons.forEach(btn => {
+            btn.style.filter = "saturate(0%)";
+        });
+        button.style.filter = "saturate(100%)";
+    });
+
+    button.addEventListener("mouseout", () => {
+       
+        buttons.forEach(btn => {
+            btn.style.filter = "saturate(100%)";
+        });
+    });
+});
+
+   
+

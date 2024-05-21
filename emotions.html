@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/dak4nau.css">
+    <title>c.b.t arts</title>
+</head>
+<body>
+    <my-header></my-header>
+    <div class="emotions-container">
+        <div class="emotions-start-container"> 
+            <h1>What's that Emotion?</h1>
+            <p>"What's That Emotion?" is a captivating solo game designed to challenge players' emotional intelligence. With each play,
+                 the game generates a random emotion for the player to identify and explore. From the highs of happiness to the lows of 
+                 frustration, each emotion prompts self-reflection and introspection. Rooted in Cognitive Behavioral Therapy (CBT) 
+                 principles, "What's That Emotion?" encourages players to delve into the underlying thoughts and triggers associated 
+                 with each feeling, fostering greater self-awareness and emotional regulation. </p>
+            <div class="emotion-play-btn">
+                <a href="#start-game" class="play-btn">Paly</a>
+            </div>
+        </div>
+       
+
+        <div class="emotions-choose-container" id="start-game">
+            <div class="emotions-choose-card">
+                <div id="emotion-info">
+                    <h3 id="emoton-name">Emotion Name</h3>
+                    <p id="emotion-info-p"> Information about Emotion</p>
+                </div>
+                <div> <button id="genarate-emotion">Genarate</button></div>
+               
+            </div>
+            <div><img src="./images/no-image.png" alt="emotion painting" id="emotion-img"></div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+        <my-back-btn></my-back-btn>
+    </div>
+
+    <my-footer></my-footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script src="./emotions.js"></script>
+</body>
+</html> 
+</body>
+</html>
