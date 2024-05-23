@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/dak4nau.css">
     <title>c.b.t arts</title>
 </head>
-<body>
+<body >
     <my-header></my-header>
     <div class="wheel-container">
         <h1>Wheel of Solutions</h1>
@@ -18,37 +18,42 @@
             <div >
                 <div class="wheel-problem">
                     <h4>what is the problem?</h4>
-                    <textarea id="problem" name="thought" rows="6" cols="50"></textarea><br>
+                    <textarea id="problem" name="thought" rows="6" cols="30"  maxlength="40"></textarea><br>
                     <div class="wheel-buttons">  
                         <button id="submit-sproblem" class="Submit">Submit</button>
-                        <button class="reset">Reset</button>
+                        <button class="reset" id="reset-problem">Reset</button>
                     </div>
                   
                 </div>
                 <div class="wheel-solution-add">
                     <h4>solutions:</h4>
                     <p>Write alternative solutions and add them to the wheel.</p>
-                    <textarea id="solution" name="thought" rows="6" cols="50" ></textarea><br>
+                    <textarea id="solution" name="thought" rows="6" cols="30" maxlength="40"></textarea><br>
                    <div class="wheel-buttons">  
                     <button id="add-solution" class="add">Add</button>
-                    <button class="reset">reset</button>
+                    <button class="reset" id="reset-solution">reset</button>
                    </div>
                   
                 </div>  
             </div>
             <div class="wheel-parent">
-                <div class="arrow"></div>
-                <div id="wheel" class="wheel"></div>
-                <button id="spin-btn">Spin</button>
-                <div id="final-value">
-                    <p>Click The spin Button To start</p>
+                <div class="wheel-container">
+                    <canvas id="wheel" class="wheel"></canvas>
+                    <button id="spin-btn">Spin</button>
+                    <img src="./images/spinner-arrow-.png" alt="spinner arrow" class="arrow-img">
                 </div>
+             
             </div>
             
         </div>
         <div class="wheel-part-2">
-            <h1>The Solution is:</h1>
-            <img src="./images/solution.png">
+            <h1 id="the-problem">The Solution is:</h1>
+            <div class="img-solution">   
+                <img src="./images/solution.png" >
+                <div id="final-value">
+                    <p>Click The spin Button To start</p>
+                </div>
+            </div>
         </div>
 
 
@@ -56,13 +61,13 @@
         <my-back-btn></my-back-btn>
     </div>
     <my-footer></my-footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script src="./wheel.js"></script>
         
 </body>
-</html> 
-</body>
+
 </html>
