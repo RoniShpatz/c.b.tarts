@@ -9,14 +9,15 @@ const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
 let arryOfSolutions = [];
 
-function MakeRotationValeus(minDegree, maxDegree, value) {
+function makeRotationValeus(minDegree, maxDegree, value) {
   this.minDegree = minDegree;
   this.maxDegree = maxDegree;
   this.value = value;
+  return { minDegree: minDegree, maxDegree: maxDegree, value: value };
 }
 
 var rotationValues = [
-
+  { minDegree: 0, maxDegree: 360, value: "Wirte Solutions!" }
 ];
 
 
@@ -33,16 +34,19 @@ var pieColors = [
 
   let myChart;
  
-  function makeChart(rotationValues, data, arryOfSolutions) {
- 
-    let myChart = new Chart(wheel, {
+  function makeChart() {
+    if (myChart) {
+      myChart.destroy();
+     }
+     
+     myChart = new Chart(wheel, {
       //Plugin for displaying text on pie chart
       plugins: [ChartDataLabels],
       //Chart Type Pie
       type: "pie",
       data: {
         //Labels(values which are to be displayed on chart)
-        labels: ["add solution"],
+        labels: arryOfSolutions,
         //Settings for dataset/pie
         datasets: [
           {
@@ -88,7 +92,7 @@ var pieColors = [
       for (let i of rotationValues) {
         //if the angleValue is between min and max then display it
         if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-          finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
+          finalValue.innerHTML = `<p>${i.value}</p>`;
           spinBtn.disabled = false;
           break;
         }
@@ -133,10 +137,8 @@ var pieColors = [
         resultValue = 101;
       }
     }, 10);
-    myChart.data.labels = arryOfSolutions;
-    rotationValues = rotationValues;
-    data = data;
-    myChart.update();
+   
+    
   });
   
   
@@ -146,34 +148,29 @@ var pieColors = [
   }
 
 window.onload = () => {
-  makeChart(rotationValues, data, arryOfSolutions)
+  makeChart(arryOfSolutions)
 }
  
+
 
 function addSolutionToWheel() {
     const text = solution.value
     if(text) {
         arryOfSolutions.push(text);
-        data = [];
         rotationValues = [];
-        var num = 1;
-        for(i = 0; i < arryOfSolutions.length; i++){
-          data.push.num;
-        }
+        data = [];
         let circleSlice = arryOfSolutions.length;
         let min = 0;
         arryOfSolutions.forEach(solution => {
             let max = min + Math.floor(360 / circleSlice);
-            let newRotation = new  MakeRotationValeus(min, max, solution);
+            data.push(1);
+            let newRotation =  makeRotationValeus(min, max, solution);
             rotationValues.push(newRotation);
             min = max + 1;
         });
         rotationValues[circleSlice - 1].maxDegree = 360;
-        if (myChart) {
-          myChart.destroy();
-          makeChart(rotationValues, data, arryOfSolutions);
-         }
-       makeChart(rotationValues, data, arryOfSolutions);
+        
+       makeChart();
         console.log(rotationValues);
         
         solution.value = "";
