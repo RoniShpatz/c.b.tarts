@@ -1,197 +1,90 @@
-const problem = document.getElementById("problem");
-const solution = document.getElementById("solution");
-const submitProblem = document.getElementById("submit-sproblem");
-const addSolution = document.getElementById("add-solution");
-const resetSolution = document.getElementById("reset-solution");
-const resetProblem = document.getElementById("reset-problem");
-const theProblem = document.getElementById("the-problem");
-const spinBtn = document.getElementById("spin-btn");
-const finalValue = document.getElementById("final-value");
+
+const spinBtn =  document.querySelector('.spin-btn');
+const wheel = document.querySelector('.wheel-container .wheel');
+const addBtn = document.querySelector('#add-solution');
+const resetSolution = document.querySelector('#reset-solution');
+const submitProblem = document.querySelector('#submit-sproblem');
+const resetProblem = document.querySelector('#reset-problem');
+const divParentSlices = document.querySelector('.wheel .slices');
+const textParens = document.querySelector('.wheel .text');
+const solution = document.querySelector('#solution');
+const problem = document.querySelector('#problem');
+const textRotation = document.querySelectorAll("#text");
+const theProblem = document.querySelector("#the-problem");
+const timeOut = document.querySelector(".timeOut");
+const solutionShow = document.querySelector("#final-value p")
+
 let arryOfSolutions = [];
 
-function makeRotationValeus(minDegree, maxDegree, value) {
-  this.minDegree = minDegree;
-  this.maxDegree = maxDegree;
-  this.value = value;
-  return { minDegree: minDegree, maxDegree: maxDegree, value: value };
-}
-
-var rotationValues = [
-  { minDegree: 0, maxDegree: 360, value: "Wirte Solutions!" }
-];
 
 
-var data = [1];
 
-var pieColors = [
-    "#59D5E0",
-    "#F5DD61",
-    "#59D5E0",
-    "#FAA300",
-    "#59D5E0",
-    "#FAA300",
-  ];
+function divideWheel() {
+        let rotationDeg = Math.floor(360 / arryOfSolutions.length);
+        let clipPath1 = 0 + (50 / arryOfSolutions.length)
+        let clipPath2 = 100 - (50 / arryOfSolutions.length)
 
-  let myChart;
- 
-  function makeChart() {
-    if (myChart) {
-      myChart.destroy();
-     }
-     
-     myChart = new Chart(wheel, {
-      //Plugin for displaying text on pie chart
-      plugins: [ChartDataLabels],
-      //Chart Type Pie
-      type: "pie",
-      data: {
-        //Labels(values which are to be displayed on chart)
-        labels: arryOfSolutions,
-        //Settings for dataset/pie
-        datasets: [
-          {
-            backgroundColor: pieColors,
-            data: data,
-          },
-        ],
-      },
-      options: {
-        //Responsive chart
-        responsive: true,
-        animation: { duration: 0 },
-        plugins: {
-          //hide tooltip and legend
-          tooltip: false,
-          legend: {
-            display: false,
-          },
-          //display labels inside pie chart
-          datalabels: {
-            color: "#0C0C0C",
-            formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-            font: { size: 14 },
-            anchor: 'top',
-            align: 'center',
-             
-            rotation:  function(ctx) {
-              const valuesBefore = ctx.dataset.data.slice(0, ctx.dataIndex).reduce((a, b) => a + b, 0);
-              const sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
-              const rotation = ((valuesBefore + ctx.dataset.data[ctx.dataIndex] /2) /sum *360);
-              return rotation < 180 ? rotation-90 : rotation+90;
-              },
-              formatter: function (value, context) {
-                return context.chart.data.labels[context.dataIndex]; },
-                    
-          },
-        },
-      },
-    });
-  
-    //display value based on the randomAngle
-    const valueGenerator = (angleValue) => {
-      for (let i of rotationValues) {
-        //if the angleValue is between min and max then display it
-        if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-          finalValue.innerHTML = `<p>${i.value}</p>`;
-          spinBtn.disabled = false;
-          break;
-        }
-      }
-    };
-  
-    //Spinner count
-    let count = 0;
-    //100 rotations for animation and last rotation for result
-    let resultValue = 101;
-    //Start spinning
-    spinBtn.addEventListener("click", () => {
-      spinBtn.disabled = true;
-      //Empty final value
-      finalValue.innerHTML = `<p>Good Luck!</p>`;
-      //Generate random degrees to stop at
-      let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
-      //Interval for rotation animation
-      let rotationInterval = window.setInterval(() => {
-      //Set rotation for piechart
-      /*
-      Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count. Eventually on last rotation we rotate by 1 degree at a time.
-      */
-      myChart.options.rotation = myChart.options.rotation + resultValue;
-      myChart.options.plugins.datalabels.rotation = function(ctx) {
-        const valuesBefore = ctx.dataset.data.slice(0, ctx.dataIndex).reduce((a, b) => a + b, 0);
-        const sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
-        const rotation = myChart.options.rotation + ((valuesBefore + ctx.dataset.data[ctx.dataIndex] /2) /sum *360);
-        return rotation-90;
-      };
-      //Update chart with new value;
-      myChart.update();
-      //If rotation>360 reset it back to 0
-      if (myChart.options.rotation >= 360) {
-        count += 1;
-        resultValue -= 5;
-        myChart.options.rotation = 0;
-      } else if (count > 15 && myChart.options.rotation == randomDegree) {
-        valueGenerator(randomDegree);
-        clearInterval(rotationInterval);
-        count = 0;
-        resultValue = 101;
-      }
-    }, 10);
-   
+        console.log(arryOfSolutions.length)       
+        divParentSlices.innerHTML = "";
+        textParens.innerHTML = "";
+        arryOfSolutions.forEach((currentSolution,index) => {
+            let newSpan = document.createElement("span");
+            if ( arryOfSolutions.length === 1) {
+                newSpan.style.setProperty('visibility', 'hidden');
+            } else {
+                newSpan.style.setProperty('transform', `rotate(${rotationDeg / 2}deg)`);
+            }
+            let textNewDiv = document.createElement("div");
+            let textPara = document.createElement("p");
+        
+            
+
+            textPara.innerHTML = currentSolution;
+            textPara.classList.add("solutions");
+            textNewDiv.style.setProperty("--i",index);
+            textNewDiv.style.setProperty('transform', `rotate(calc(${rotationDeg}deg * var(--i)))`);
+            textNewDiv.appendChild(textPara);
+            textNewDiv.appendChild(newSpan);
+            textParens.appendChild(textNewDiv);
+            textPara.onclick = function() {console.log(textPara)}
+        }); 
     
-  });
-  
-  
-  return myChart
-
-
-  }
-
-window.onload = () => {
-  makeChart(arryOfSolutions)
+     
 }
- 
+
+addBtn.addEventListener("click", () => {
+        let newSolution = solution.value;
+        if (newSolution) {
+            arryOfSolutions.push(newSolution);
+            solution.value = "";
+            divideWheel();
+            setTimeout(() => {
+                timeOut.style.opacity = "1";
+            }, 5000);
+        }; 
+      
+   
+    });
 
 
-function addSolutionToWheel() {
-    const text = solution.value
-    if(text) {
-        arryOfSolutions.push(text);
-        rotationValues = [];
-        data = [];
-        let circleSlice = arryOfSolutions.length;
-        let min = 0;
-        arryOfSolutions.forEach(solution => {
-            let max = min + Math.floor(360 / circleSlice);
-            data.push(1);
-            let newRotation =  makeRotationValeus(min, max, solution);
-            rotationValues.push(newRotation);
-            min = max + 1;
-        });
-        rotationValues[circleSlice - 1].maxDegree = 360;
-        
-       makeChart();
-        console.log(rotationValues);
-        
-        solution.value = "";
-    }
-  }
 
-  function addProblem() {
-    const text = problem.value;
-    if (text) {
-      theProblem.innerHTML = `<h1>The Solution to ${problem.value} is:</h1>`;
-      problem.value = "";
-    }
-  }
+spinBtn.addEventListener("click", () => {
+    let value = Math.ceil(Math.random() * 3600);
+    wheel.style.transform = "rotate(" + value + "deg)";
+   
+});
 
-
-  addSolution.addEventListener("click", addSolutionToWheel)
-  resetSolution.addEventListener("click", () => {
+resetSolution.addEventListener("click", () => {
     solution.value = "";
-  })
+});
 
-  submitProblem.addEventListener("click", addProblem);
-  resetProblem.addEventListener("click", () => {
+submitProblem.addEventListener("click", () => {
+    theProblem.innerHTML = `The Solutorin to ${problem.value} is :`;
     problem.value = "";
-  })
+
+})
+
+resetProblem.addEventListener("click", () => {
+    problem.value = "";
+})
+

@@ -1250,6 +1250,7 @@ margin-right: 2%;
     background-size: cover;
     padding-bottom: 10%;
     position: relative;
+    overflow-x: hidden;
    
 }
 .river-bkg div {
@@ -1310,11 +1311,12 @@ margin-right: 2%;
     justify-content: space-around;
     align-items: center;
     height: 70vh;
-   
+
 }
 .wheel-container h1{
     color: #59D5E0;
     margin-bottom: 1%;
+   
 }
 
 .wheel-pat-1 h4{
@@ -1347,62 +1349,121 @@ margin-right: 2%;
     color: #F4538A;
     transition: all 0.2s ease ;
 }
-.wheel-buttons {
+.wheel-buttons{
     display: flex;
     justify-content: space-around;
-}
-.wheel-pat-1 button:hover{
-    background-color: #59D5E0;
-    color: black;
-}
-
-
-.wheel-parent {
-    width: 90%;
-  max-width: 30rem;
-  max-height: 60vh;
-}
-.wheel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-#wheel {
-    max-height: inherit;
-    width: inherit;
-    top: 0;
-    padding: 0; 
-}
-
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-#spin-btn {
-    background-color: #F4538A;
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: white;
-    border: solid #FAA300;
+    align-items: center;
     cursor: pointer;
 }
-.wheel-container .arrow-img {
-    position: absolute;
-    right: -10%;
-    bottom: 51.5%;
-    
-}
-.img-solution {
-    position: relative;
+.wheel-buttons button:hover{
+    background-color: #F4538A;
+    color: white;
 }
 
-#final-value {
+
+.wheel-container-wheel {
+ position: relative;
+ width: 500px;
+ height: 500px;
+ text-align: center;   
+}
+
+
+.wheel-container .arrow {
     position: absolute;
-    left: 40%;
-    top: 18%;
-    transform: rotate(-18deg);
-    font-size: 1.4rem;
+    top: -5%;
+    left: 47%;
+    width: 30px;
+    height: 50px;
+    background: #F4538A;
+    z-index: 6;
+    clip-path: polygon(50% 0%, 65% 50%, 50% 100%, 35% 50%);
+    box-shadow: 0px 8px 24px 0px rgba(140, 149, 159, 0.2);
+
+} 
+
+
+.wheel-container .wheel {
+    position: relative;
+    border: solid #59D5E0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 5s ease-in-out;
+}
+
+.spin-btn{
+    position: absolute;
+    inset: 200px;
+    background: #59D5E0;
+    background-color: #F4538A;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    user-select: none;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
     
+}
+
+.wheel .text div span{
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+    width: 2px;
+    height: 50%;
+    background: #59D5E0;
+    transform-origin: bottom;
    
 }
+
+.timeOut {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.text div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    inset: 10px;
+    transition: transform 10s ease-in-out;
+}
+
+.text div  p{
+    color: #F4538A;
+    max-width: 15ch;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+}
+
+/* 
+.text > div > p:hover{
+    color: #FAA300;
+    text-shadow: -1px 1px 7px #F5DD61;;
+} */
+
+.img-solution{
+    position: relative;
+   
+}
+#final-value {
+    position: absolute;
+    left: 33%;
+    top: 20%;
+    transform: rotate(-18deg);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #F4538A;
+}
+
+

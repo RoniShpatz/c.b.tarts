@@ -36,13 +36,20 @@
                   
                 </div>  
             </div>
-            <div class="wheel-parent">
-                <div class="wheel-container">
-                    <canvas id="wheel" class="wheel"></canvas>
-                    <button id="spin-btn">Spin</button>
-                    <img src="./images/spinner-arrow-.png" alt="spinner arrow" class="arrow-img">
-                </div>
-             
+            <div class="wheel-container-wheel">
+       
+                <div class="arrow"></div>
+                <div class="spin-btn">Spin</div>
+                <div class="wheel">
+                    <div class="slices" id="slices">
+                        <!-- <div class="d-1 c-1" ></div> -->
+                    </div>
+                    <div class="text" id="text">
+                        <!-- <div style="--i:0;"><p >Add Solutions</p></div> -->
+                    </div>
+                </div> 
+                <p class="timeOut">Click on the solution that was picked</p>
+               
             </div>
             
         </div>
@@ -62,8 +69,8 @@
     </div>
     <my-footer></my-footer>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script> -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script src="./wheel.js"></script>
