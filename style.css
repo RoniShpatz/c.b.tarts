@@ -660,8 +660,8 @@ footer  p {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .back-btn {
     background-color: #59D5E0;
@@ -1237,7 +1237,9 @@ margin-right: 2%;
 .river-play-btn:hover{
     background-color: #F4538A;
 }
-
+.river-part-2 {
+    position: relative;
+}
 .river-part-2 h3 {
     color: #F4538A;
     margin-top: 10%;
@@ -1298,6 +1300,35 @@ margin-right: 2%;
     background-color: #F4538A;
     color: white;
 }
+
+.timer {
+    position: absolute;
+    left: 5%;
+    top: 7%;
+    display: inline-block;
+    border: solid #F4538A;
+    padding: 0.5%;
+    border-radius: 20%;
+    margin-top: 2%;
+}
+.timer h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.timer button{
+    border: none;
+    background-color: transparent;
+    color: #F4538A;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.timer button:hover{
+    color: #FAA300;
+    text-shadow: -1px 1px 7px #F4538A;
+}
+
 /* wheel style */
 
 .wheel-container{
@@ -1445,13 +1476,15 @@ margin-right: 2%;
     pointer-events:none; 
 }
 
-.text div  p{
+.text div div  p{
+    display: inline;
     color: #F4538A;
     max-width: 15ch;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: break-word;
+
 }
 
 /* 
@@ -1479,5 +1512,13 @@ margin-right: 2%;
     height: 100%;
     pointer-events: auto;
     cursor: pointer;
+
+}
+.wheel-part-3 h1{
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.wheel-part-3 p{
+    line-height: 200%;
 
 }

@@ -36,33 +36,34 @@ function divideWheel() {
                 }
                 let textNewDiv = document.createElement("div");
                 let textPara = document.createElement("p");
-            
-                textPara.setAttribute.id = `p-${index}`;
+                let divText = document.createElement("div");
+                
+              
                 textPara.innerHTML = currentSolution;
                 textPara.classList.add("solutions");
+                divText.appendChild(textPara)
 
                 textNewDiv.style.setProperty("--i",index);
                 textNewDiv.style.setProperty('transform', `rotate(calc(${rotationDeg}deg * var(--i)))`);
                
-                textNewDiv.appendChild(textPara);
+                textNewDiv.appendChild(divText);
                 textNewDiv.appendChild(newSpan);
-                console.log(textNewDiv)
+               
                 textParens.appendChild(textNewDiv);
 
             
                 
             }); 
             slutionsBtns = document.querySelectorAll(".solutions");
-            console.log(slutionsBtns[0].innerHTML);
-            slutionsBtns.forEach(slutionsBtn => {
+            let targetValeu = document.getElementById("img-solution");
+            console.log(slutionsBtns)
+            slutionsBtns.forEach((slutionsBtn,index) => {
                 slutionsBtn.addEventListener("click", () => {
-                    finalValue.innerHTML = slutionsBtn.innerHTML;
-                   
+                    solutionShow.innerHTML = slutionsBtn.innerHTML;
+                   targetValeu.scrollIntoView({ behavior: 'smooth' });
                 })
             })
-          
-
-    }
+        }
 
   addBtn.addEventListener("click", () => {
         let newSolution = solution.value;

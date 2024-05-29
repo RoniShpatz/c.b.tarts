@@ -91,6 +91,14 @@ customElements.define(`my-back-btn`, MyBackBtn);
 
 
 
+class MyBackPlayBtn extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =`<div class="back-btn-div"><a class="back-btn" href="./games.html"><span>Play Menu</span></a></div>` }};
+
+customElements.define(`my-back-play-btn`, MyBackPlayBtn);   
+
+
+
 
 // scroll and small logo shows indexedDB.html
 const currntPathname = window.location.pathname;
