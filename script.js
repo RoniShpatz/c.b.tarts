@@ -1,3 +1,36 @@
+class MyHeaderSmall extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <header class = "header ">
+                <div class="small-header-box">
+                    <div class="logo-div">
+                    <a href="index.html"> <img src="./images/logo copy.png" id="logo-small"></a>
+                    </div>
+                    <div class="svg-btn" id = "svg-btn">
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                        </svg>
+                    </div>
+                </div>
+            <div class="header-bar ">
+                <div class="headre-left-colum">
+                    <a href="./about.html" >About C.B.T</a><br>
+                    <a href="./tests.html" >Test</a><br>
+                    <a href="./games.html" />Games</a><br>
+                    <a href="./aboutme.html" >About Me</a><br>
+                </div>
+            </div>
+            </header>
+       
+        `
+        }
+    }
+
+
+customElements.define(`my-header-small`, MyHeaderSmall);
+
 class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -24,6 +57,9 @@ class MyHeader extends HTMLElement {
 
 
 customElements.define(`my-header`, MyHeader);
+
+
+
 
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
@@ -81,6 +117,9 @@ class MyFooter extends HTMLElement {
         }
 
 
+
+
+
 customElements.define(`my-footer`, MyFooter);
 
 class MyBackBtn extends HTMLElement {
@@ -97,6 +136,12 @@ class MyBackPlayBtn extends HTMLElement {
 
 customElements.define(`my-back-play-btn`, MyBackPlayBtn);   
 
+
+class MyBackTestBtn extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =`<div class="back-btn-div"><a class="back-btn" href="./tests.html"><span>Test Menu</span></a></div>` }};
+
+customElements.define(`my-back-test-btn`, MyBackTestBtn );  
 
 
 
@@ -136,3 +181,27 @@ addEventListener("scroll", () => {
 
 });
 
+
+
+const svgBtn = document.getElementById(`svg-btn`);
+let isSvgBtnPresses = false;
+console.log(svgBtn)
+
+function openHeaderMenu() {
+        const menu = document.querySelector(`.headre-left-colum`);
+        if (isSvgBtnPresses){
+            menu.style.display = `none`;
+            isSvgBtnPresses = false;
+        
+        } else {
+            menu.style.display = `block`;
+            isSvgBtnPresses = true;
+        }
+    }
+
+svgBtn.addEventListener("click", openHeaderMenu);
+
+
+
+// transform: scale(0);
+// display: none;

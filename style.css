@@ -74,6 +74,64 @@ header {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+.my-header-small {
+    display: none;
+}
+
+@keyframes dropDown {
+    from{
+        transform: scale(0) translateY(-100px);
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media  (max-width: 940px) { 
+   .my-header-small{
+    display: block;
+   }
+   .my-header {
+    display: none;
+   }
+   .headre-left-colum {
+    display: none;
+    width: 100%;
+    font-size: 1.5rem;
+    animation:  dropDown 0.3s;
+   
+   
+   }
+
+    .headre-left-colum a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        text-decoration-line: none;
+        color: #F4538A;
+        margin-top: 1%;
+        margin-bottom: 0px;
+    }
+   .logo-div{ 
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/your_transparent.png', sizingMethod='scale');
+    background: none !important;
+    pointer-events:none; 
+  
+   }
+   .svg-btn {
+    fill: #59D5E0;
+    margin-left: 1%;
+    margin-top: 1%;
+    
+   }
+
+}
+
+
+
+
 /*footer*/
 
 footer {
@@ -137,7 +195,9 @@ footer  p {
     height: 100%; 
 }
 
+/* @media  (max-width: 600px) {
 
+} */
 
 /*index*/
 
@@ -323,6 +383,21 @@ footer  p {
             transform: rotate(960deg);
         }
     }
+
+    @keyframes ball-small {
+        from {
+            left: 50%;
+            bottom: 10%;
+            transform: rotate(0deg) scale(0.7);
+            
+        }
+        to {
+            left: 100%;
+            bottom: 10%;
+            transform: rotate(960deg) scale(0.7);
+        }
+    }
+
     .grey-bkg{
         position: absolute;
         left: 0;
@@ -351,6 +426,7 @@ footer  p {
       
         
     }
+    
     .paly-carusel-alighn {
         display: flex;
         flex-direction: column;
@@ -624,6 +700,74 @@ footer  p {
 .test-contianer-flex div  a:hover {
     background-color: #F4538A;
 }
+
+@media  (max-width: 940px) {
+    .background-animation{
+        width: 100%;
+    }
+    .background-animation  .tree{
+        transition: all 0.3s;
+        right: -20%;
+        transform: scale(0.7);
+        top: 20%;
+    }
+    .background-animation  .tree4{
+        transition: all 0.3s;
+        right: -15%;
+        transform: scale(0.7);
+        top: 20%;
+    }
+    .background-animation  .tree2{
+        transition: all 0.3s;
+        left: -30%;
+        transform: scale(0.7);
+        top: 20%;
+    }
+    .background-animation  .tree3{
+        transition: all 0.3s;
+        left: 0;
+        transform: scale(0.7);
+        top: 20%;
+    }
+    .background-animation  .ball{
+        transform: scale(0.7);
+        animation-name: ball-small;
+    }
+    .background-animation .clouds{
+       display: none;
+    }
+    #big-logo{
+        width: 100%;
+    }
+   .logo-para p{
+        text-align: center;
+    }
+    
+
+}
+
+@media  (max-width: 940px){
+    .background-animation  .tree{
+        transition: all 0.3s;
+        right: -30%;
+        transform: scale(0.5);
+        top: 20%;
+    }
+    .background-animation  .tree4{
+      display: none;
+    }
+    .background-animation  .tree2{
+        transition: all 0.3s;
+        left: -50%;
+        transform: scale(0.5);
+        top: 20%;
+    }
+    .background-animation  .tree3{
+       display: none;
+    }
+
+}
+
 
 /* about cbt style */
 

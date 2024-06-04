@@ -78,6 +78,9 @@ function getSelectorValue() {
 
 
         function displayResultOn(scorePara) {
+            if (document.querySelector(`.popup p`)) {
+                displayResult.removeChild(document.querySelector(`.popup p`));
+                }
             displayResult.appendChild(scorePara);
             console.log(displayResult);
             displayResult.style.display = `block`; 
