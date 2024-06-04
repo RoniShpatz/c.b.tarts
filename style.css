@@ -719,6 +719,7 @@ footer  p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
  }
  .test-contianer-tests {
     text-align: center;
@@ -1794,6 +1795,38 @@ margin-right: 2%;
     pointer-events: none;
 }
 
+
+
+.popup {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    display: none;
+}
+.popup h6{
+    position: absolute;
+    right: 1%;
+    top: -10%;
+    color: #F4538A;
+    font-size: 3rem;
+}
+
+
 .popup p{
-    background-color: #F4538A;
+    background-color: rgba(255, 255, 255, 0.97);
+    color: #F4538A;
+    border-radius: 20px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    padding-left: 2%;
+    padding-right: 5%;
+    border: solid  #59D5E0;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 }
