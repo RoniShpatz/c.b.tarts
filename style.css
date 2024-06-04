@@ -1522,3 +1522,278 @@ margin-right: 2%;
     line-height: 200%;
 
 }
+
+/* test 1 */
+
+.letter-comtainer {
+    position: sticky;
+    top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    background-color: white;
+    
+}
+.test-contianer-tests h1{
+    margin-bottom: 3%;
+}
+.letter-comtainer .red{
+    border: solid #e05959;
+    color: #e05959;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.letter-comtainer .orange{
+    border: solid #daa45d;
+    color: #e0a559;
+}
+.letter-comtainer .green{
+    border: solid #3b904c;
+    color: #3b904c;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+ 
+.test-contianer-tests ol {
+   list-style: none; 
+   font-size: 1.4rem;
+   margin-left: 0;
+    padding-left: 0;
+}
+
+.test-contianer-tests li div .agree[type="radio"]{
+    appearance: none;
+    background-color: white;
+    font: inherit;
+    color: #3b904c;
+    width: 5em;
+    height: 5em;
+    border: 0.15em solid #3b904c;
+    border-radius: 50%; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.test-contianer-tests li div .agree[type="radio"]:before{
+    content: "";
+    width: 4.8em;
+    height: 4.8em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 4em 4em #3b904c;
+    position: absolute;
+  
+    
+}
+.test-contianer-tests li div .agree[type="radio"]:checked::before{
+    transform: scale(0.8);
+}
+
+.test-contianer-tests li div .small-agree[type="radio"]{
+    appearance: none;
+    background-color: white;
+   
+    font: inherit;
+    color: #3b904c;
+    width: 4.2em;
+    height: 4.2em;
+    border: 0.15em solid #72903b;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-contianer-tests li div .small-agree[type="radio"]:before{
+    content: "";
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    transform: scale(0) ;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 4.2em 4.2em #72903b;
+    position: absolute;
+    
+    
+    
+}
+.test-contianer-tests li div .small-agree[type="radio"]:checked::before{
+    transform: scale(0.8);
+}
+
+.test-contianer-tests li div .neutral[type="radio"]{
+    appearance: none;
+    background-color: white;
+   
+    font: inherit;
+    color: #3b904c;
+    width: 4.2em;
+    height: 4.2em;
+    border: 0.14em solid #daa45d;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.test-contianer-tests li div .neutral[type="radio"]:before{
+    content: "";
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    transform: scale(0) ;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 4em 4em #daa45d;
+    position: absolute;
+  
+   
+    
+}
+.test-contianer-tests li div .neutral[type="radio"]:checked::before{
+    transform: scale(0.8);
+}
+
+.test-contianer-tests li div .small-disagree[type="radio"]{
+    appearance: none;
+    background-color: white;
+   
+    font: inherit;
+    color: #3b904c;
+    width: 4.2em;
+    height: 4.2em;
+    border: 0.15em solid #da705d;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-contianer-tests li div .small-disagree[type="radio"]:before{
+    content: "";
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    transform: scale(0) ;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 4.2em 4.2em #da705d;
+    position: absolute;
+    
+    
+    
+}
+.test-contianer-tests li div .small-disagree[type="radio"]:checked::before{
+    transform: scale(0.8);
+}
+
+.test-contianer-tests li div .disagree[type="radio"]{
+    appearance: none;
+    background-color: white;
+
+    font: inherit;
+    color: #3b904c;
+    width: 5em;
+    height: 5em;
+    border: 0.15em solid #e05959;
+    border-radius: 50%; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-contianer-tests li div .disagree[type="radio"]:before{
+    content: "";
+    width: 4.8em;
+    height: 4.8em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 4em 4em #e05959;
+    position: absolute;
+}
+.test-contianer-tests li div .disagree[type="radio"]:checked::before{
+    transform: scale(0.8);
+}
+
+.input-container {
+    display: flex;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.submit-froum button{
+    color: white;
+    background-color: #F4538A;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    padding: 1%;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 2%;
+
+}
+
+.submit-froum button::before {
+    content: "";
+    position: absolute;
+    left: -4rem;
+    top: -2rem;
+    width: 1rem;
+    height: 8rem;
+    background-color: #FAA300;
+   
+    transition: all 0.3s ease;
+    
+}
+
+
+.submit-froum button::after {
+    content: "";
+    position: absolute;
+    right: -5rem;
+    top: -2rem;
+    width: 1rem;
+    height: 8rem;
+    background-color: #F5DD61;
+    
+    transition: all 0.3s ease;
+}
+
+.submit-froum button:hover:before{
+    transform: translate(15rem);
+}
+.submit-froum button:hover::after{
+    transform: translate(-15rem);
+}
+
+.submit-froum button:hover{
+    background-color: #59D5E0;
+}
+
+.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.popup p{
+    background-color: #F4538A;
+}

@@ -43,8 +43,8 @@ class MyFooter extends HTMLElement {
                         </div>
                         <div class="tests">
                             <p>Tests</p>
-                            <a href="#">Your Mental <br>Health test</a>
-                            <a href="#">Emotional <br> StabilityTest </a>
+                            <a href="./test1.html" > Your Mental <br>Health test</a>
+                            <a href="./test2.html">Emotional <br> StabilityTest </a>
                         </div>
                         <div class="games-footer">
                             <p>Games</p>
