@@ -4,7 +4,7 @@ class MyHeaderSmall extends HTMLElement {
         <header class = "header ">
                 <div class="small-header-box">
                     <div class="logo-div">
-                    <a href="index.html"> <img src="./images/logo copy.png" id="logo-small"></a>
+                    
                     </div>
                     <div class="svg-btn" id = "svg-btn">
                         <svg viewBox="0 0 100 80" width="40" height="40">
@@ -16,6 +16,7 @@ class MyHeaderSmall extends HTMLElement {
                 </div>
             <div class="header-bar ">
                 <div class="headre-left-colum">
+                    <a href="index.html"> <img src="./images/logo copy.png" id="logo-header-small"></a>
                     <a href="./about.html" >About C.B.T</a><br>
                     <a href="./tests.html" >Test</a><br>
                     <a href="./games.html" />Games</a><br>

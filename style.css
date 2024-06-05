@@ -476,6 +476,7 @@ footer  p {
         align-items: center;
         
     }
+
     .caruael-games{
         max-width: fit-content;
         position: relative;
@@ -567,6 +568,7 @@ footer  p {
     .games-grid {
         display: flex;
         justify-content: space-between;
+      
         overflow-x: hidden;
         padding-top: 2%;
         padding-bottom: 2%;
@@ -577,6 +579,11 @@ footer  p {
     .games-grid {
         scroll-behavior: auto;
         cursor: grab;
+
+    }
+    .caruael-games{
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .btn-caruael-games{
@@ -586,6 +593,7 @@ footer  p {
         width: 100%;
         display: flex;
         justify-content: space-between;
+     
     }
     .btn-caruael-games :first-child {
         visibility: hidden;
@@ -615,7 +623,7 @@ footer  p {
   }
   @media screen and (max-width: 660px) {
     .games{
-        width: calc(100% / 1);
+        max-width: calc(100% / 1);
     }
   }
 
@@ -700,10 +708,17 @@ footer  p {
 .test-contianer-flex div  a:hover {
     background-color: #F4538A;
 }
+.index-test-img .img2{
+    display: none;
+}
 
 @media  (max-width: 940px) {
+    .index-main {
+        height: 50vh;
+    }
     .background-animation{
         width: 100%;
+        overflow: hidden;
     }
     .background-animation  .tree{
         transition: all 0.3s;
@@ -742,8 +757,37 @@ footer  p {
    .logo-para p{
         text-align: center;
     }
-    
-
+    .play-contianer {
+        width: 100%;
+    }
+    .paly-carusel-alighn {
+        width: 100%;
+    }
+    .play-contianer h1 {
+        font-size: 3rem;
+        margin-bottom: 4%;
+    }
+    .play-contianer p {
+        font-size: 1rem;
+        
+    }
+    .test-contianer-flex .index-test-img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+    .test-contianer-flex{
+        width: 100%;
+    }
+    .index-test-img .img2 {
+        display: block;
+    }
+    .index-test-img .img1 {
+        display: none;
+    }
+    .test-contianer-flex div  a {
+        font-size: 1.2rem;
+    }
 }
 
 @media  (max-width: 940px){
@@ -751,7 +795,7 @@ footer  p {
         transition: all 0.3s;
         right: -30%;
         transform: scale(0.5);
-        top: 20%;
+        top: 40%;
     }
     .background-animation  .tree4{
       display: none;
@@ -760,7 +804,7 @@ footer  p {
         transition: all 0.3s;
         left: -50%;
         transform: scale(0.5);
-        top: 20%;
+        top: 40%;
     }
     .background-animation  .tree3{
        display: none;
