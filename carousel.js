@@ -5,7 +5,7 @@ const firstImage = carousel.querySelectorAll("div")[0];
 const arrowBtns = document.querySelectorAll(".btn-caruael-games button");
 
 let isDragdStart = false, prevPageX, PrevScrollLeft;
-let firstImageWidth = firstImage.clientWidth + 10 ;
+let firstImageWidth = firstImage.clientWidth + 8 ;
 let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
 const dragStart = (e) => {

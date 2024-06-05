@@ -480,6 +480,7 @@ footer  p {
     .caruael-games{
         max-width: fit-content;
         position: relative;
+      
         
     }
 
@@ -568,7 +569,7 @@ footer  p {
     .games-grid {
         display: flex;
         justify-content: space-between;
-      
+        width: 100%;
         overflow-x: hidden;
         padding-top: 2%;
         padding-bottom: 2%;
@@ -616,17 +617,7 @@ footer  p {
         color: #FAA300;
     }
 
-  @media screen and (max-width: 1141px) {
-    .games{
-        width: calc(100% / 3);
-    }
-  }
-  @media screen and (max-width: 660px) {
-    .games{
-        width: calc(100% / 1);
-        
-    }
-  }
+
 
   /* index /test/ */
   .test-contianer{
@@ -712,8 +703,27 @@ footer  p {
 .index-test-img .img2{
     display: none;
 }
+@media screen and (max-width: 900px) {
+    .caruael-games {
+        max-width: 100%;
+    }
+    .games {
+      width: calc(100% / 2);
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .caruael-games {
+        max-width: 100%;
+    }
+    .games {
+      width: 100%;
+    }
+  }
 
 @media  (max-width: 940px) {
+    /* carusel  */
+  
     .index-main {
         height: 50vh;
     }
