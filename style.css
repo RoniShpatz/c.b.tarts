@@ -1,10 +1,10 @@
 body {
     font-family: "Montserrat", sans-serif;
-    perspective: 100px;
+    perspective: 1000px;
 }
 
 /* headr */
-header {
+.header {
     position: sticky;
     left: 0;
     top: 0;
@@ -80,27 +80,41 @@ header {
 
 @keyframes dropDown {
     from{
-        transform: scale(0) translateY(-100px);
+        transform: scaleX(0) translateY(-100px);
     }
     to {
-        transform: scale(1) translateY(0);
+        transform: scaleX(1) translateY(0);
     }
 }
 
 @media  (max-width: 940px) { 
-   .my-header-small{
-    display: block;
-   }
-   .my-header {
-    display: none;
-   }
+    .header {
+        display: none;
+       }
+       .my-header-small {
+        display: block;
+        position: sticky;
+        top: 4%;
+        z-index: 20;
+
+    
+     }
+    .svg-btn {
+      
+    }
+
+
+    .header-bar{
+        display: none;
+    }
+
    .headre-left-colum {
     display: none;
     width: 100%;
+    background-color: #ffffff;
     font-size: 1.5rem;
     animation:  dropDown 0.3s;
-   
-   
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
    }
 
     .headre-left-colum a{
@@ -712,14 +726,6 @@ footer  p {
     }
   }
   
-  @media screen and (max-width: 550px) {
-    .caruael-games {
-        max-width: 100%;
-    }
-    .games {
-      width: 100%;
-    }
-  }
 
 @media  (max-width: 940px) {
     /* carusel  */
@@ -805,30 +811,42 @@ footer  p {
     .test-contianer-flex div  a {
         font-size: 1.2rem;
     }
-}
-
-@media  (max-width: 940px){
     .background-animation  .tree{
         transition: all 0.3s;
-        right: -30%;
+        right: -10%;
         transform: scale(0.5);
-        top: 40%;
+        top: 30%;
     }
     .background-animation  .tree4{
       display: none;
     }
     .background-animation  .tree2{
         transition: all 0.3s;
-        left: -50%;
+        left: -20%;
         transform: scale(0.5);
-        top: 40%;
+        top: 30%;
     }
     .background-animation  .tree3{
        display: none;
     }
-
 }
 
+@media screen and (max-width: 550px) {
+    .caruael-games {
+        max-width: 100%;
+    }
+    .games {
+      width: 100%;
+    }
+    .background-animation  .tree{
+        left: 60%;
+        top: 20%;
+    }
+    .background-animation  .tree2{
+        right: 60%;
+        top: 20%;
+    }
+  }
 
 /* about cbt style */
 
@@ -857,6 +875,7 @@ footer  p {
     display: inline-block;
     font-size: 2rem;
     transform: rotate(20deg);
+    transition: rotate 0.3s ease;
 }
 .about-container-2 .about-list  p{
     margin-left: 2rem;
@@ -915,6 +934,25 @@ footer  p {
     background-color: #F4538A;
    
  }
+
+ @media  (max-width: 940px) {
+  .about-container {
+    width: 95%;
+  }
+  .about-container-2 h3 span {
+    transform: rotate(-25deg);
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .about-container {
+        width: 99%;
+      }
+      .about-container-2 h1{
+        line-height: 120%;
+      }
+  }
+
 
  /* test page style */
  .test-choose-container-2 {
@@ -1123,6 +1161,16 @@ footer  p {
     font-size: 1.1rem;
     margin: 0;
 }
+
+
+@media  (max-width: 940px) {
+  
+  }
+
+  @media  (max-width: 540px) {
+  
+  }
+
 
 
 

@@ -1,13 +1,13 @@
 class MyHeaderSmall extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <header class = "header ">
+        <header class = "header-small" id= "headre-small-sticky">
                 <div class="small-header-box">
                     <div class="logo-div">
                     
                     </div>
-                    <div class="svg-btn" id = "svg-btn">
-                        <svg viewBox="0 0 100 80" width="40" height="40">
+                    <div class="svg-btn" >
+                        <svg viewBox="0 0 100 80" width="40" height="40" id ="svg-btn">
                         <rect width="100" height="20"></rect>
                         <rect y="30" width="100" height="20"></rect>
                         <rect y="60" width="100" height="20"></rect>
@@ -190,12 +190,15 @@ console.log(svgBtn)
 
 function openHeaderMenu() {
         const menu = document.querySelector(`.headre-left-colum`);
+        const menueDiv = document.querySelector(`.header-bar`);
         if (isSvgBtnPresses){
             menu.style.display = `none`;
+            menueDiv.style.display = `none`;
             isSvgBtnPresses = false;
         
         } else {
             menu.style.display = `block`;
+            menueDiv.style.display = `block`;
             isSvgBtnPresses = true;
         }
     }
