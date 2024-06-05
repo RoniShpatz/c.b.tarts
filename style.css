@@ -623,7 +623,8 @@ footer  p {
   }
   @media screen and (max-width: 660px) {
     .games{
-        max-width: calc(100% / 1);
+        width: calc(100% / 1);
+        
     }
   }
 
@@ -762,6 +763,12 @@ footer  p {
     }
     .paly-carusel-alighn {
         width: 100%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .test-toughts-index p {
+        font-size: 1.1rem;
     }
     .play-contianer h1 {
         font-size: 3rem;
