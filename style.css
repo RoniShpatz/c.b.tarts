@@ -23,9 +23,10 @@ body {
     padding: 1.5%;
 }
 .you-are-here {
-   background-image: url("./images/i-am-here.png");
+   background-image: url("./images/i-am-here.png") ;
    background-position: center;
    background-repeat: no-repeat;
+  
   
 }
 .header-bar a:hover {
@@ -1550,7 +1551,7 @@ justify-content: space-around !important;
         margin: 25%;
     }
     .game-container-3 {
-        margin-top: 200%;
+        margin-top: 150%;
         margin-bottom: 35%;
     }
     .games-choose-container{
@@ -1674,6 +1675,56 @@ margin-right: 2%;
     color: #F5DD61;
     background-color: #F4538A;
 }
+#emotion-img{
+    border-radius: 20px;
+}
+@media screen and (max-width: 1191px){
+    .emotions-choose-container{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 915px){
+    .emotions-container{
+        width: 96%;
+    }
+}
+@media screen and (max-width: 557px){
+    .emotions-container{
+        width: 99%;
+    }
+}
+
+@media screen and (max-width: 598px){
+    .emotions-container{
+        width: 100%;
+      
+    }
+    #emotion-img{
+        width: 100%;
+    }
+    .emotions-start-container div{
+       height: 40%;
+    }
+    .emotions-choose-card:last-child {
+        overflow: hidden;
+        background-color: #da705d;
+    }
+}
+
+@media screen and (max-width: 364px){
+
+    .emotions-start-container div{
+        height: 20%;
+     }
+     #emotion-info p{
+      font-size: 0.8rem;
+
+     }
+
+}
+
+
 /* river game */
 
 .river-container{
@@ -1779,9 +1830,10 @@ margin-right: 2%;
     background-repeat: no-repeat;
     background-size: 100px 100px;
     width: fit-content;
-    animation: moving-thoughts 120s ease forwards; /* Changed ease to linear */
+    animation: moving-thoughts 120s ease forwards; 
     offset-path: path("M.18,73.2S194.52-2.28,311.5,1.5s373.58,264.15,545.28,273.58S1492.63-17.64,1711.5,1.36s501.89,226.55,590.57,228.44,158.49-69.81,158.49-69.81");
 }
+
 
 @keyframes moving-thoughts {
     from {
@@ -1795,6 +1847,10 @@ margin-right: 2%;
 
 .river-part-2 textarea{
     border: solid #FAA300;
+    width: 500px;
+    border-radius: 20px;
+    height: 200px;
+    font-size: 1.2rem;
 }
 
 .river-part-2 .submit {
@@ -1839,6 +1895,56 @@ margin-right: 2%;
     color: #FAA300;
     text-shadow: -1px 1px 7px #F4538A;
 }
+
+@media screen and (max-width: 1108px)  {
+    .river-container {
+        width: 90%;
+    }
+}  
+
+@media screen and (max-width: 982px)  {
+    .river-container {
+        width: 100%;
+    }
+}  
+@media screen and (max-width: 892px)  {
+    .timer {
+       left: 2%;
+       top: 30%;
+    }
+    .river-bkg{
+        background-image: url(./images/river-bkg\ small.png);
+    }
+    .river-bkg div {
+        offset-path: path("m73.98,0s53.37,38.33,65.22,48.56c49.69,42.92,112.12,100.5,128.75,123.11,36.27,49.3,102.37,86.96,151.5,105.04,49.13,18.07,186.7,51.92,203.44,56.25,34.71,8.97,116.31,33.54,116.31,33.54l2.26,317.36L0,634.42,24.85,230.4,11.29,3.39,73.98,0Z");
+         }
+}
+    @media screen and (max-width: 668px){
+        .timer {
+            left: 70%;
+            top: 120%;
+            z-index: 10;
+         }
+         .river-part-2 textarea{
+            width: 450px;
+            height: 180px;
+         }
+     
+    }
+
+    @media screen and (max-width: 482px){
+        .river-part-2 textarea{
+            width: 390px;
+            height: 180px;
+         }
+} 
+@media screen and (max-width: 418px){
+    .river-part-2 textarea{
+        width: 300px;
+        height: 150px;
+     }
+} 
+
 
 /* wheel style */
 
@@ -2340,3 +2446,148 @@ margin-right: 2%;
     border: solid  #59D5E0;
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 }
+
+@media screen and (max-width: 1200px){
+    .input-container{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 913px){
+    .input-container{
+        width: 70%;
+    } 
+}
+
+@media screen and (max-width: 913px) {
+    .input-container{
+        width: 80%;
+    } 
+}
+
+@media screen and (max-width: 737px) {
+    .input-container{
+        width: 90%;
+    } 
+    .test-contianer-tests{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 737px) {
+    .input-container{
+        width: 100%;
+    } 
+
+ 
+
+    
+    }
+
+    @media screen and (max-width: 523px) {
+
+        .letter-comtainer p {
+            font-size: 0.9rem;
+            line-height: 100%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .input-container{
+            width: 100%;
+            justify-content: space-around;
+        } 
+
+        .test-contianer-tests li div .disagree[type="radio"] {
+            width: 4.2em;
+            height: 4.2em;
+        }
+
+        .test-contianer-tests li div .disagree[type="radio"]::before{
+            width: 4em;
+            height: 4em;
+        }
+
+        .test-contianer-tests li div .small-disagree[type="radio"] {
+            width: 3.2em;
+            height: 3.2em;
+        }
+        .test-contianer-tests li div .small-disagree[type="radio"]::before{
+            width: 3em;
+            height: 3em;
+        }
+        .test-contianer-tests li div .neutral[type="radio"]{
+            width: 3em;
+            height: 3em;
+        }
+
+        .test-contianer-tests li div .neutral[type="radio"]::before{
+            width: 2.8em;
+            height: 2.8em;
+        }
+
+        .test-contianer-tests li div .small-agree[type="radio"]{
+            width: 3.2em;
+            height: 3.2em;
+        }
+        .test-contianer-tests li div .small-agree[type="radio"]::before{
+            width: 3em;
+            height: 3em;
+        }
+        .test-contianer-tests li div .agree[type="radio"]{
+            width: 4.2em;
+            height: 4.2em;
+        }
+        .test-contianer-tests li div .agree[type="radio"]::before{
+            width: 4em;
+            height: 4em;
+        }
+    } 
+
+    @media screen and (max-width: 425px) {
+  
+
+        .test-contianer-tests li div .disagree[type="radio"] {
+            width: 3.2em;
+            height: 3.2em;
+        }
+
+        .test-contianer-tests li div .disagree[type="radio"]::before{
+            width: 3em;
+            height: 3em;
+        }
+
+        .test-contianer-tests li div .small-disagree[type="radio"] {
+            width: 2.2em;
+            height: 2.2em;
+        }
+        .test-contianer-tests li div .small-disagree[type="radio"]::before{
+            width: 2em;
+            height: 2em;
+        }
+        .test-contianer-tests li div .neutral[type="radio"]{
+            width: 2em;
+            height: 2em;
+        }
+
+        .test-contianer-tests li div .neutral[type="radio"]::before{
+            width: 1.8em;
+            height: 1.8em;
+        }
+
+        .test-contianer-tests li div .small-agree[type="radio"]{
+            width: 2.2em;
+            height: 2.2em;
+        }
+        .test-contianer-tests li div .small-agree[type="radio"]::before{
+            width: 2em;
+            height: 2em;
+        }
+        .test-contianer-tests li div .agree[type="radio"]{
+            width: 3.2em;
+            height: 3.2em;
+        }
+        .test-contianer-tests li div .agree[type="radio"]::before{
+            width: 3em;
+            height: 3em;
+        }
+    } 

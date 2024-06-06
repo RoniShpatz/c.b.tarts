@@ -152,10 +152,15 @@ const currntPathnameWithDot = `.` + currntPathname
 console.log(currntPathnameWithDot);
 
 ////where am i in the header
-const currentPageA = document.querySelector(`header [href = "${currntPathnameWithDot}"]`)
-if(currentPageA) {
-    currentPageA.classList.add("you-are-here")
-}
+const currentPageA = document.querySelectorAll(`header [href = "${currntPathnameWithDot}"]`)
+console.log(currentPageA)
+currentPageA.forEach(a => {
+    if(a) {
+        a.classList.add("you-are-here");
+    }
+
+})
+
 
 
 
