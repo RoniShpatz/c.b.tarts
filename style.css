@@ -2078,6 +2078,126 @@ margin-right: 2%;
     transition: all 0.5s ease;
 }
 
+@media screen and (max-width: 1196px)   {
+    .wheel-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1054px)   {
+    .wheel-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 940px) {
+    .wheel-pat-1{
+        flex-direction: column;
+        
+    }
+    .wheel-input{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .wheel-pat-1 {
+        height: auto;
+        
+    }
+    .wheel-pat-1 textarea {
+        width: 220px;
+        height: 60px;
+    }
+    .wheel-input {
+        position: relative;
+        padding-bottom: 5%;
+    }
+    #p-solution{
+        position: absolute;
+        left: 25%;
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 741px){
+    #final-value{
+        left: 19% !important;
+      
+    }
+    .wheel-pat-1 h4{
+        font-size: 1rem;
+    }
+} 
+
+@media screen and (max-width: 727px) {
+    #p-solution{
+        position: absolute;
+        left: 20%;
+        bottom: 5%;
+    }
+    .wheel-input{
+        padding-bottom: 7%;
+    }
+    #final-value{
+        left: 20%!important;
+        top: 20%;
+    }
+}
+
+
+@media screen and (max-width: 717px) {
+    .img-solution img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 579px){
+    #p-solution{
+        left: 12%!important;
+        bottom: 10%;
+    }
+    .wheel-input{
+        padding-bottom: 19%;
+    }
+    
+}
+
+@media screen and (max-width: 524px){
+    .wheel-container-wheel {
+        transform: scale(0.9);
+    }
+    .wheel-part-2{
+        overflow-x: hidden;
+    }
+    #final-value{
+       font-size: 1rem!important;
+    }
+    .footer {
+       padding: 0; 
+    }
+    #p-solution {
+        left: 5% !important;
+    }
+}
+
+@media screen and (max-width: 474px){
+   .wheel-input textarea{
+    width: 150px;
+   }
+   #p-solution {
+    left: 2% !important;
+}
+.wheel-container-wheel {
+    transform: scale(0.8);
+}
+}
+
+@media screen and (max-width: 428px) {
+    .wheel-container-wheel {
+        transform: scale(0.7);
+    }
+}
+
 /* .text {
     pointer-events:none; 
 } */
