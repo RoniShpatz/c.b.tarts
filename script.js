@@ -88,6 +88,7 @@ class MyFooter extends HTMLElement {
                             <a href="./river.html">River of <br>Thoughts</a>
                             <a href="./emotions.html">What's that<br> Emotion</a>
                             <a href="./wheel.html">Wheel of <br>Solutions</a>
+                            <a href="calm.html">Calm Game</a>
                         </div>
                     </div>
                     <div class="social-container">

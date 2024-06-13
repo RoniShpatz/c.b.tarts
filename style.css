@@ -2749,3 +2749,157 @@ margin-right: 2%;
             height: 3em;
         }
     } 
+
+    /* Calm Game */
+
+    .calm-container{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .river-container .calm-part-1 h1{
+        color: #59D5E0;
+    }
+
+    .river-container .calm-part-2 h1 {
+        color: #59D5E0;
+    }
+    .calm-game{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .calm-menu {
+        margin-top: 5%;
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .calm-menu div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .calm-menu div input{
+       width: 120px;
+       height: 20px;
+       border: none;
+       appearance: none;
+       z-index: 3;
+       cursor: pointer;
+    }
+    .calm-menu div label{
+        pointer-events: none;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        z-index: 2;
+       
+    }
+    .calm-menu div label:before{
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 20px;
+        background-color: #F5DD61;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transform:  rotate(135deg) scale(0);
+        filter: blur(10px);
+        transition: transform 0.3s ease;
+
+    }
+
+    .calm-menu div input:checked + label::before {
+        transform: scale(1.2) rotate(3.142rad);
+    }
+
+    .calm-menu div input:hover + label{
+        color: #e0a559;
+    }
+
+    .calm-menu div input:checked + label{
+        color: #F4538A;
+    }
+    .start-btn {
+        border: none;
+        background-color: #FAA300;
+        padding: 1%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+    }
+    .stop-btn{
+        border: none;
+        background-color: #59D5E0;
+        padding: 1%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .stop-btn button{
+        color: white;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .start-btn  button{
+        color: white;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .start-btn span::before {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 20px;
+        background-color: #F4538A;
+        left: -15%;
+        top: 0;
+        transform: rotate(90deg) scale(1);
+        transition: all 0.4s ease;
+        transform-origin: left top;
+        z-index: -1;
+    }
+
+    .stop-btn span::before {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 20px;
+        background-color: #F4538A;
+        left: -15%;
+        top: 0;
+        transform: rotate(90deg) scale(1);
+        transition: all 0.4s ease;
+        transform-origin: left top;
+        z-index: -1;
+    }
+
+    #start-span{
+        z-index: 2;
+    }
+    .start-btn button:hover span:before{
+        transform: rotate(0deg) scale(4);
+    }
+
+    .stop-btn button:hover span:before{
+        transform: rotate(0deg) scale(4);
+    }
+    .calm-img-container img {
+        width: 100%;
+        height: auto;
+    }
