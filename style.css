@@ -2769,6 +2769,7 @@ margin-right: 2%;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
+        position: relative;
     }
     .calm-menu {
         margin-top: 5%;
@@ -2776,6 +2777,7 @@ margin-right: 2%;
         display: flex;
         justify-content: space-around;
         width: 100%;
+       
     }
     .calm-menu div {
         position: relative;
@@ -2902,4 +2904,24 @@ margin-right: 2%;
     .calm-img-container img {
         width: 100%;
         height: auto;
+    }
+
+    #time{
+        position: absolute;
+        left: 0;
+        top: 12%;
+        display: none;
+        font-size: 1.8rem;
+        color: #F4538A;
+        border: solid #F4538A;
+        padding: 2%;
+        border-radius: 20px;
+    }
+    .calm-img-container p{
+        color:  #F4538A;
+        font-size: 1.4rem;
+        position: absolute;
+        left: 18%;
+        top: 15%;
+
     }
