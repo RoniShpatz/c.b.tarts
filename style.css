@@ -3095,10 +3095,11 @@ margin-right: 2%;
         display: flex;
         justify-content: center;
         align-items: center;
-      
+        width: 100%;
     }
     .h2-div-input {
         margin-top: 2%;
+        
     }
     .h2-div-input div div{
         width: 2rem;
@@ -3133,4 +3134,41 @@ margin-right: 2%;
    }
    .calm-part-2 p:first-child{
     margin-top: 2%;
+   }
+
+
+   @media screen and (max-width: 900px){
+    .ruler{
+        width: 90%;
+    }
+   }
+   @media screen and (max-width: 642px){
+    .all-rates{
+        margin-top: 8%;
+       }
+    
+   }
+   @media screen and (max-width: 564px){
+    .h2-div-input div input{
+        max-width: 500px;
+    }
+   }
+   @media screen and (max-width: 508px){
+    .h2-div-input div input{
+        max-width: 400px;
+    }
+   }
+   @media screen and (max-width: 453px){
+    .h2-div-input div input{
+        max-width: 350px;
+    }
+   }
+   @media screen and (max-width: 395px){
+    .all-rates{
+        margin-top: 15%;
+       }
+       .h2-div-input div input{
+        max-width: 250px;
+    }
+
    }
