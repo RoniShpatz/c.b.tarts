@@ -6,6 +6,9 @@ const stopBtn = document.querySelector('#stop-span');
 const pickGender = document.querySelector("#choose");
 const time = document.querySelector("#time");
 
+const startBtnSmall = document.querySelector("#start-span-small")
+const stopBtnSmall = document.querySelector("#stop-span-small")
+
 const imagesMale = ["./images/boy-in.png", "./images/boy-out.png"];
 const imagesFemale = ["./images/girl-in.png", "./images/girl-out.png"];
 const santance = ["Breath in...", "Breath out..."]
@@ -99,4 +102,35 @@ stopBtn.addEventListener("click", () => {
     
 })
 
+startBtnSmall.addEventListener("click", () => {
+    let gender = getSelectorValue();
+    clearInterval(intervalId);
+    clearInterval(intervalTime);
+    currntIndex = -1;
+    if (gender) {
+        time.style.display = "inline";
+        pickGender.textContent = "Choose gender and press start.";
+        if(gender === "male") {
+            img.src = imagesMale[0];
+            intervalId = setInterval(() => {changeImage(imagesMale)}, 10000);
+            changeImage(imagesMale);
+        } else if (gender === "female"){
+            img.src = imagesFemale[0];
+            intervalId = setInterval(() => {changeImage(imagesFemale) }, 10000);
+            changeImage(imagesFemale);
+        }
+    } else {
+        pickGender.textContent = "Pick gender and than press start."
+    }
+ 
+});
 
+stopBtnSmall.addEventListener("click", () => {
+    clearInterval(intervalTime);
+    clearInterval(intervalId);
+    time.textContent = "";
+    img.src = "./images/both.png" ;
+    para.textContent = "";
+    time.style.display = "none";
+   
+})
