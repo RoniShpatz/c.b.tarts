@@ -3165,6 +3165,9 @@ margin-right: 2%;
     .h2-div-input div input{
         max-width: 350px;
     }
+    .h2-div h2{
+        font-size: 1.8rem;
+    }
    }
    @media screen and (max-width: 395px){
     .all-rates{

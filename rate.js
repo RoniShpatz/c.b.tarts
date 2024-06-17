@@ -40,10 +40,36 @@ function addRateAttachListener() {
 
 function dragDivRated() {
     const divRateArry = document.querySelectorAll(".all-rates div");
+    // mouse event
     divRateArry.forEach(div => {
         div.addEventListener("dragstart", (e) => {
             e.dataTransfer.setData('text/plain', div.id); 
         });
+    });
+
+    // toch event
+    div.addEventListener("touchstart", (e) => {
+        const touch = e.targetTouches[0];
+        div.style.position = "absolute";
+        div.style.left = `${touch.clientX - div.offsetWidth / 2}px`;
+        div.style.top = `${touch.clientY - div.offsetHeight / 2}px`;
+        div.classList.add('dragging');
+    });
+
+    div.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        const touch = e.targetTouches[0];
+        div.style.left = `${touch.clientX - div.offsetWidth / 2}px`;
+        div.style.top = `${touch.clientY - div.offsetHeight / 2}px`;
+    });
+    div.addEventListener("touchend", (e) => {
+        div.classList.remove('dragging');
+        div.style.position = "static";
+        const touch = e.changedTouches[0];
+        const dropZone = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (dropZone && dropZone.classList.contains("drop-zone")) {
+            dropZone.appendChild(div);
+        }
     });
 
     rullerDivs.forEach(dropDiv => {
