@@ -2,7 +2,7 @@ const textArea = document.querySelectorAll(".river-part-2 textarea")[0];
 const submit = document.getElementsByClassName("submit")[0];
 const divParent = document.getElementsByClassName("river-bkg")[0];
 const startBtn = document.querySelector(".start");
-const time = document.getElementById("time");
+const time = document.getElementById("time-river");
 const timeContainer = document.getElementsByClassName("river-part-2");
 let divChildren = [];
 

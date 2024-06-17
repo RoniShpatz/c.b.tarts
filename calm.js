@@ -66,12 +66,12 @@ function startTimer(duration) {
 }
 
 starBtn.addEventListener("click", () => {
-    time.style.display = "inline";
     let gender = getSelectorValue();
     clearInterval(intervalId);
     clearInterval(intervalTime);
     currntIndex = -1;
     if (gender) {
+        time.style.display = "inline";
         pickGender.textContent = "Choose gender and press start.";
         if(gender === "male") {
             img.src = imagesMale[0];

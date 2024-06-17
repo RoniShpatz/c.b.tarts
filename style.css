@@ -2925,3 +2925,212 @@ margin-right: 2%;
         top: 15%;
 
     }
+
+    /* lets rate */
+
+    .ruler {
+        position: relative;
+        width: 70%;
+        margin: 20px auto;
+        height: 14px;
+       }
+       .ruler .cm {
+        position: absolute;
+        border-left: 1px solid #555;
+        height: 14px;
+        width: 10%;
+       }
+       .ruler .cm:after {
+        position: absolute;
+        bottom: -15px;
+        font: 11px/1 sans-serif;
+       }
+    
+     
+       .ruler .cm:nth-of-type(1) {
+        left: 0%;
+       }
+       .ruler .cm:nth-of-type(1):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "0";
+       }
+       .ruler .cm:nth-of-type(2) {
+        left: 10%;
+       }
+       .ruler .cm:nth-of-type(2):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "1";
+        
+       }
+       .ruler .cm:nth-of-type(3) {
+        left: 20%;
+       }
+       .ruler .cm:nth-of-type(3):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "2";
+       }
+       .ruler .cm:nth-of-type(4) {
+        left: 30%;
+       }
+       .ruler .cm:nth-of-type(4):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "3";
+       }
+       .ruler .cm:nth-of-type(5) {
+        left: -5px;
+        left: 40%;
+       }
+       .ruler .cm:nth-of-type(5):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "4";
+       }
+       .ruler .cm:nth-of-type(6) {
+        left: 50%;
+       }
+       .ruler .cm:nth-of-type(6):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "5";
+       }
+       .ruler .cm:nth-of-type(7) {
+        left: 60%;
+       }
+       .ruler .cm:nth-of-type(7):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "6";
+       }
+       .ruler .cm:nth-of-type(8) {
+        left: 70%;
+       }
+       .ruler .cm:nth-of-type(8):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "7";
+       }
+       .ruler .cm:nth-of-type(9) {
+        left: 80%;
+       }
+       .ruler .cm:nth-of-type(9):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "8";
+       }
+       .ruler .cm:nth-of-type(10) {
+        left: 90%;
+       }
+       .ruler .cm:nth-of-type(10):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "9";
+       }
+       .ruler .cm:nth-of-type(11) {
+        left: 100%;
+       }
+       .ruler .cm:nth-of-type(11):after {
+        left: -4px;
+        top: 20px;
+        font-size: 1.2rem;
+        content: "10";
+       }
+       
+    .rate-part-1{
+        height: 80vh;
+    }
+
+    .input-rate input[type = "text"]{
+      border: solid #F5DD61;  
+      border-radius: 10px;
+      padding: 1%;
+      font-size: 0.9rem;
+      display: inline;
+    }
+    .input-rate {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .input-rate div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FAA300;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 0.5%;
+    }
+
+  #submit-add-rade{
+        color  : white;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .h2-div h2{
+        font-size: 2.5rem;
+        color: #59D5E0;
+        cursor: pointer;
+    }
+    .h2-div-input div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .h2-div-input {
+        margin-top: 2%;
+    }
+    .h2-div-input div div{
+        width: 2rem;
+        height: 2rem;
+        background-color: #FAA300;
+        color: white;
+        font-size: 2rem;
+        border-radius: 50%;
+        margin-left: 0.5%;
+
+    }
+    .h2-div-input div input{
+        font-size: 2.5rem;
+        color: #59D5E0;
+        text-align: center;
+        border: dotted #b9b9b9;
+        border-radius: 20px;
+        font-weight: 700;
+    }
+   .instructions p{
+    font-size: 1rem;
+    color: #555;
+    display: inline-block;
+   }
+
+   .all-rates{
+    margin-top: 5%;
+   }
+
+   .calm-part-2 p:last-child{
+    margin-bottom: 5%;
+   }
+   .calm-part-2 p:first-child{
+    margin-top: 2%;
+   }
