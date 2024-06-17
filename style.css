@@ -3128,6 +3128,7 @@ margin-right: 2%;
    .all-rates{
     margin-top: 5%;
    }
+ 
 
    .calm-part-2 p:last-child{
     margin-bottom: 5%;
@@ -3160,6 +3161,9 @@ margin-right: 2%;
     .ruler{
         width: 100%;
     }
+    .cm div:first-child{
+     margin-top: 100%;
+    }
    }
    @media screen and (max-width: 453px){
     .h2-div-input div input{
@@ -3182,6 +3186,5 @@ margin-right: 2%;
        .h2-div-input div input{
         max-width: 250px;
     }
-    
 
    }
