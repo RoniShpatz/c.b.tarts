@@ -62,12 +62,14 @@ function dragDivRated() {
         div.style.left = `${touch.clientX - div.offsetWidth / 2}px`;
         div.style.top = `${touch.clientY - div.offsetHeight / 2}px`;
     });
+
+
     div.addEventListener("touchend", (e) => {
         div.classList.remove('dragging');
         div.style.position = "static";
         const touch = e.changedTouches[0];
         const dropZone = document.elementFromPoint(touch.clientX, touch.clientY);
-        if (dropZone && dropZone.classList.contains("drop-zone")) {
+        if (dropZone && dropZone.classList.contains("cm")) {
             dropZone.appendChild(div);
         }
     });
