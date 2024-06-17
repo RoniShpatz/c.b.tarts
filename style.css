@@ -2925,6 +2925,28 @@ margin-right: 2%;
         top: 15%;
 
     }
+    .small-div-start-stop {
+        display: none;
+    }
+
+    @media screen and (max-width: 420px) {
+        .small-div-start-stop {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 9%;
+            margin-bottom: 0%;
+
+        }
+        .calm-menu .start-btn {
+            display: none;
+        }
+        .calm-menu .stop-btn{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 420px){
+
+    }
 
     /* lets rate */
 
