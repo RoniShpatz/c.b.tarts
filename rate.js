@@ -36,6 +36,12 @@ function addRateAttachListener() {
         })
         
     })
+    divRateArry.forEach(div => {
+        div.addEventListener("touchend", () =>{
+            div.remove();
+            toRateAdded = toRateAdded.filter(item => item !== div);
+        })
+    })
 }
 
 function dragDivRated() {

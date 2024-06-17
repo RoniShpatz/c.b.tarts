@@ -3162,12 +3162,13 @@ margin-right: 2%;
         width: 100%;
     }
     .cm div:first-child{
-     margin-top: 100%;
+     margin-top: 170%;
     }
    }
    @media screen and (max-width: 453px){
     .h2-div-input div input{
         max-width: 350px;
+        font-size: 1.5rem;
     }
     .h2-div h2{
         font-size: 1.8rem;
@@ -3175,8 +3176,18 @@ margin-right: 2%;
     .instructions p{
         font-size: 0.8rem;
     }
-    .all-rates{
+    .all-rates p{
+        margin-top: 0;
        font-size: 1.4rem; 
+    }
+    .all-rates div:first-child{
+        margin-top: 20%; 
+    }
+    .ruler .cm  {
+        height: 40px;
+    }
+    .ruler .cm::after{
+        top: 100% !important;
     }
    }
    @media screen and (max-width: 395px){
