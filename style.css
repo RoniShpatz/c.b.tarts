@@ -3181,11 +3181,15 @@ margin-right: 2%;
         max-width: 400px;
     }
     .ruler{
-        width: 100%;
+        width: 90%;
     }
     .cm div:first-child{
      margin-top: 170%;
     }
+    .ruler .cm:nth-of-type(11):after{
+        left: -12px;
+    }
+    
    }
    @media screen and (max-width: 453px){
     .h2-div-input div input{
